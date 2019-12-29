@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+    <extension
+            id="application"
+            point="org.eclipse.core.runtime.applications">
+        <application>
+            <run
+                    class="propertiestest.Application">
+            </run>
+        </application>
+    </extension>
+    <extension
+            point="org.eclipse.ui.perspectives">
+        <perspective
+                class="propertiestest.Perspective"
+                name="RCP Perspective"
+                id="propertiesTest.perspective">
+        </perspective>
+    </extension>
+    <extension
+            point="org.eclipse.ui.views">
+        <view
+                class="propertiestest.MyView"
+                id="propertiesTest.myView"
+                name="my view"
+                restorable="true">
+        </view>
+        <view
+                class="propertiestest.PropertiesView"
+                id="propertiesTest.propertiesView"
+                name="properties view "
+                restorable="true">
+        </view>
+    </extension>
+    <extension
+            point="org.eclipse.ui.perspectiveExtensions">  
+              
+        <perspectiveExtension
+                targetID="propertiesTest.perspective">
+                     
+            <view
+                    id="propertiesTest.myView"
+                    relative="org.eclipse.ui.editorss"
+                    relationship="top"
+                    ratio="0.5f"
+                    showTitle="true"
+                    visible="true"
+            >         
+            </view>
+            <!--            <view-->
+            <!--                    id="IPageLayout.ID_PROP_SHEET"-->
+            <!--                    relative="org.eclipse.ui.editorss"-->
+            <!--                    relationship="bottom"-->
+            <!--                    ratio="0.5f"-->
+            <!--                    showTitle="true"-->
+            <!--                    visible="true"-->
+            <!--            >-->
+            <!--            </view>-->
+        </perspectiveExtension>
+    </extension>
+
+</plugin>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PropertiesTest
+Bundle-SymbolicName: propertiesTest;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.apache.felix.scr,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.8.600"
+Automatic-Module-Name: propertiesTest
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
